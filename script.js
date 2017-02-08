@@ -4,8 +4,8 @@ $(function(){
 	var $aSlideBtns = $("#slide-nav a");		//获取侧边栏按钮组
 	var $skillList = $("#skill .skill-list");		//获取技能列表
 	var iClientH = $(window).height();
-
-
+	var timeStamp = 0;		//记录滚滚动时间
+	
 	$aPages.css({height:iClientH});
 	$(window).resize(function(){
 		$aPages.css({height:iClientH});
@@ -35,7 +35,10 @@ $(function(){
 				var $obj = $oldCurrent.next().children();
 			}
 		}
-		turnPage($obj);
+		if(timeStamp === 0 || event.timeStamp -500 > timeStamp){
+			turnPage($obj);
+			timeStamp = event.timeStamp;
+		}
 	});
 	$(document).on("DOMMouseScroll",function(event){
 		var $oldCurrent = $aSlideBtns.parent().filter(".current");
@@ -53,7 +56,11 @@ $(function(){
 				var $obj = $oldCurrent.next().children();
 			}
 		}
-		turnPage($obj);
+		
+		if(timeStamp === 0 || event.timeStamp -500 > timeStamp){
+			turnPage($obj);
+			timeStamp = event.timeStamp;
+		}
 	});
 
 
