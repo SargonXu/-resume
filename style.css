@@ -479,7 +479,9 @@ h2,h3,p{
 	font-size: 12px;
 	line-height: 30px;
 }
-
+.five .contact-link{
+	text-align:center;
+}
 
 /* 侧边栏slide-nav样式 */
 #slide-nav{
