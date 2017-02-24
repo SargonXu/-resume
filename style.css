@@ -119,7 +119,7 @@ h2,h3,p{
 	display: block;
 	width: 150px;
 	height: 150px;
-	margin: 130px auto 20px;
+	margin: 80px auto 20px;
 	border: 2px solid #d1d1d1;
 	border-radius: 50% 50%;
 	background: #fff;
@@ -481,7 +481,7 @@ h2,h3,p{
 }
 .five .contact-body .contact-link{
 	text-align:center;
-	margin-top:60px;
+	margin-top:40px;
 }
 
 /* 侧边栏slide-nav样式 */
